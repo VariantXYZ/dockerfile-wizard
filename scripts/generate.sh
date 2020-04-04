@@ -98,6 +98,12 @@ echo "RUN perl -MCPAN -e 'install XML::Generator'"
 # install lsb-release, etc., for testing linux distro
 echo "RUN apt-get update && apt-get -y install lsb-release unzip"
 
+# install rgbds
+echo "RUN apt-get -qq -y install byacc flex pkg-config libpng-dev"
+echo "RUN git clone https://github.com/VariantXYZ/rgbds.git ~/rgbds"
+echo "RUN make -C ~/rgbds"
+echo "RUN make -C ~/rgbds install"
+
 if [ $BROWSERS = "true" ] ; then
 cat << EOF
 RUN if [ \$(grep 'VERSION_ID="8"' /etc/os-release) ] ; then \\
