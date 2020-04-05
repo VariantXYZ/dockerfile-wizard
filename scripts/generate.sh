@@ -104,6 +104,9 @@ echo "RUN git clone https://github.com/VariantXYZ/rgbds.git ~/rgbds"
 echo "RUN make -C ~/rgbds"
 echo "RUN make -C ~/rgbds install"
 
+# install ips-util
+echo "RUN python3 -m pip install ips-util"
+
 if [ $BROWSERS = "true" ] ; then
 cat << EOF
 RUN if [ \$(grep 'VERSION_ID="8"' /etc/os-release) ] ; then \\
