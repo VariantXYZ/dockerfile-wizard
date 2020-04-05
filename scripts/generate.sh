@@ -107,6 +107,9 @@ echo "RUN make -C ~/rgbds install"
 # install ips-util
 echo "RUN python3 -m pip install ips-util"
 
+# install openpyxl
+echo "RUN python3 -m pip install openpyxl"
+
 if [ $BROWSERS = "true" ] ; then
 cat << EOF
 RUN if [ \$(grep 'VERSION_ID="8"' /etc/os-release) ] ; then \\
