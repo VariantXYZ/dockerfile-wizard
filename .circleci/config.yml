@@ -4,9 +4,9 @@ image_config: &image_config
   # either as project-specific environment variables
   # or as resources in your organization's org-global Context
 
-  IMAGE_NAME: rgbds-20200621
+  IMAGE_NAME: rgbds-20200806
 
-  IMAGE_TAG: f996186fae53fa87b1f7a8b3373d91211601d21d
+  IMAGE_TAG: cb4fbdfcd534e43a5f8504b405acd7b8b29f5001
 
   # NOTE: if you're modifying this config.yml file manually
   # rather than using the included setup script,
@@ -54,7 +54,7 @@ jobs:
 
   test_image:
     docker:
-      - image: $DOCKER_USERNAME/rgbds-20200621:f996186fae53fa87b1f7a8b3373d91211601d21d
+      - image: $DOCKER_USERNAME/rgbds-20200806:cb4fbdfcd534e43a5f8504b405acd7b8b29f5001
         environment:
           <<: *image_config
 
