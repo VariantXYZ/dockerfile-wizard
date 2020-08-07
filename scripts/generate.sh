@@ -103,12 +103,15 @@ echo "RUN apt-get -qq -y install byacc flex pkg-config libpng-dev"
 echo "RUN git clone https://github.com/VariantXYZ/rgbds.git ~/rgbds"
 echo "RUN make -C ~/rgbds"
 echo "RUN make -C ~/rgbds install"
+echo "RUN rm -rf ~/rgbds"
 
 # install ips-util
 echo "RUN python3 -m pip install ips-util"
 
 # install openpyxl
-echo "RUN python3 -m pip install openpyxl"
+echo "RUN git clone https://github.com/VariantXYZ/openpyxl-variant.git openpyxl"
+echo "RUN cd openpyxl && git checkout master && git pull && python3 setup.py build && python3 setup.py install && cd .."
+echo "RUN rm -rf openpyxl"
 
 if [ $BROWSERS = "true" ] ; then
 cat << EOF
