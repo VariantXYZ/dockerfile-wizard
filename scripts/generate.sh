@@ -85,7 +85,10 @@ EOF
 fi
 
 # Update git
+echo "RUN add-apt-repository ppa:git-core/ppa -y"
+echo "RUN apt-get update"
 echo "RUN apt-get -qq -y install git"
+echo "RUN git --version"
 
 # install bats for testing
 echo "RUN git clone https://github.com/sstephenson/bats.git \
