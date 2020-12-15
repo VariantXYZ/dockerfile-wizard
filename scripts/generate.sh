@@ -84,6 +84,9 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
 EOF
 fi
 
+# Update git
+echo "RUN apt-get -qq -y install git"
+
 # install bats for testing
 echo "RUN git clone https://github.com/sstephenson/bats.git \
   && cd bats \
