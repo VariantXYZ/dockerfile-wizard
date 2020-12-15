@@ -32,7 +32,7 @@ if [ ! -e $PYTHON_VERSION_NUM ] ; then
     tar xzf Python-$PYTHON_VERSION_NUM.tgz && \
     rm Python-$PYTHON_VERSION_NUM.tgz && \
     cd Python-$PYTHON_VERSION_NUM && \
-    ./configure && \
+    ./configure --enable-optimizations && \
     make install"
 fi
 
